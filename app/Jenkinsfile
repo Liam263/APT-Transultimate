@@ -1,0 +1,51 @@
+pipeline {
+  agent any
+  tools {
+    nodejs 'v20.10.0'
+  }
+  environment {
+    BUILD_ID = 'dontKillMe /var/lib/jenkins/workspace/transultimate-app'
+  }
+  stages {
+    stage('[clone repo]') { 
+      steps {
+        git branch: 'develop', credentialsId: 'jenkins-ssh-gitlab', url: 'git@gitlab.com:transultimate/app'
+      }
+    }
+    stage('[go to main folder]') { 
+      steps {
+        sh 'cd /var/lib/jenkins/workspace/transultimate-app'
+      }
+    }
+    stage('[remove .next folder]') { 
+      steps {
+        sh 'rm -rf .next'
+      }
+    }
+    stage('[install package]') { 
+      steps {
+        sh 'yarn install'
+      }
+    }
+    stage('[build app]') { 
+      steps {
+        sh 'yarn build'
+      }
+    }
+    stage('[delete current app]') { 
+      steps {
+        sh 'pm2 delete transultimate-app'
+      }
+    }
+    stage('[start app]') { 
+      steps {
+        sh 'pm2 start --interpreter bash yarn --name transultimate-app -- start'
+      }
+    }
+    stage('[save]') { 
+      steps {
+        sh 'pm2 save'
+      }
+    }
+  }
+}

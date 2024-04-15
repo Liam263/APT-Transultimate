@@ -25,7 +25,6 @@ export class CustomerController {
   async createCustomer(
     @Body() customerData: CustomerData,
   ): Promise<CreateCustomerResponse> {
-    console.log('here');
     return this.customerSerive.createCustomer(customerData);
   }
 }

@@ -6,6 +6,12 @@ import { Public } from './decorators/public.decorator';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('/')
+  @Public()
+  hello(): string {
+    return this.appService.getHello(); 
+  }
+
   @Get('/check-mailchip')
   @Public()
   checkMailchimp(): Promise<any> {

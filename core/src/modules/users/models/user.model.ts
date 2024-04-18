@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument, Types } from 'mongoose';
-import { CustomerStatus, Role } from 'src/enums/enum';
+import { CustomerStatus, Role } from '../../../enums/enum';
 import {
   DriverScheduler,
   DriverSchedulerSchema,

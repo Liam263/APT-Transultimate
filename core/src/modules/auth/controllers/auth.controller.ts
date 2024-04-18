@@ -5,7 +5,7 @@ import {
   SigninResponse,
 } from '../interfaces/auth.interface';
 import { AuthService } from '../services/auth.service';
-import { Public } from 'src/decorators/public.decorator';
+import { Public } from '../../../decorators/public.decorator';
 import { UserDto } from '../../users/dtos/user.dtos';
 import { Role } from '../../../enums/enum';
 import { Roles } from '../../../decorators/roles.decorator';

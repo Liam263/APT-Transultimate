@@ -11,7 +11,7 @@ import { Model, Types } from 'mongoose';
 import {
   Customer,
   CustomerModelDocument,
-} from 'src/modules/customer/models/customer.model';
+} from '../../../modules/customer/models/customer.model';
 import { User, UserModelDocument } from 'src/modules/users/models/user.model';
 import { comparePassword, encodePassword } from 'src/utils/bcrypt';
 import { AuthLoginDto } from '../dtos/auth.dtos';

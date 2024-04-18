@@ -4,7 +4,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { jwtConstants } from 'src/modules/auth/constants/jwtConstants';
+import { jwtConstants } from '../modules/auth/constants/jwtConstants';
 
 export type UserTokenType = {
   _id: string;

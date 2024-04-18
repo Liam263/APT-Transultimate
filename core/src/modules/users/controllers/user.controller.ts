@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { UserToken, UserTokenType } from 'src/decorators/user.decorator';
+import { UserToken, UserTokenType } from '../../../decorators/user.decorator';
 import {
   GetUserResponse,
   GetUsersResponse,

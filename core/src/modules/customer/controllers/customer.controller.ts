@@ -2,8 +2,8 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { CustomerService } from '../services/customer.service';
 import { Types } from 'mongoose';
 import { CustomerData } from '../dtos/customer.dtos';
-import { Roles } from 'src/decorators/roles.decorator';
-import { Role } from 'src/enums/enum';
+import { Roles } from '../../../decorators/roles.decorator';
+import { Role } from '../../../enums/enum';
 import { CreateCustomerResponse } from '../interfaces/customer.interface';
 
 @Roles(Role.Admin)

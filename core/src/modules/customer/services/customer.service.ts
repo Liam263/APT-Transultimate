@@ -3,9 +3,9 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { Customer, CustomerModelDocument } from '../models/customer.model';
 import { CustomerData } from '../dtos/customer.dtos';
-import { User, UserModelDocument } from 'src/modules/users/models/user.model';
-import { encodePassword } from 'src/utils/bcrypt';
-import { Role } from 'src/enums/enum';
+import { User, UserModelDocument } from '../../../modules/users/models/user.model';
+import { encodePassword } from '../../../utils/bcrypt';
+import { Role } from '../../../enums/enum';
 import {
   CreateCustomerResponse,
   GetAllCustomerResponse,

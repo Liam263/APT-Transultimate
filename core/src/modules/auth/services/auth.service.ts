@@ -12,8 +12,8 @@ import {
   Customer,
   CustomerModelDocument,
 } from '../../../modules/customer/models/customer.model';
-import { User, UserModelDocument } from 'src/modules/users/models/user.model';
-import { comparePassword, encodePassword } from 'src/utils/bcrypt';
+import { User, UserModelDocument } from '../../../modules/users/models/user.model';
+import { comparePassword, encodePassword } from '../../../utils/bcrypt';
 import { AuthLoginDto } from '../dtos/auth.dtos';
 import {
   CreateUserResponse,

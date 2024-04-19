@@ -12,7 +12,6 @@ async function bootstrap() {
   const reflector = app.get(Reflector);
 
   app.enableCors();
-
   app.useGlobalGuards(new AuthGuard(jwtService, reflector));
   // app.useGlobalGuards(new RolesGuard(reflector));
   app.useGlobalPipes(new ValidationPipe());

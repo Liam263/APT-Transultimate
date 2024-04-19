@@ -10,7 +10,7 @@ export default function LoginLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section lang="en" suppressHydrationWarning>
+    <section suppressHydrationWarning>
       {children}
     </section>
   );

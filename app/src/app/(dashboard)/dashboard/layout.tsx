@@ -14,7 +14,7 @@ export default function LoginLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section lang="en" suppressHydrationWarning>
+    <section suppressHydrationWarning>
       <DashBoard accounts={accounts} navCollapsedSize={0}>
         <Toaster />
         <Template>{children}</Template>

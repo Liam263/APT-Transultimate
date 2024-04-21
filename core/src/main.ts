@@ -16,7 +16,7 @@ async function bootstrap() {
   // app.useGlobalGuards(new RolesGuard(reflector));
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new MongoExceptionFilter());
-  app.setGlobalPrefix('api');
+  // app.setGlobalPrefix('api');
 
   await app.listen(process.env.PORT || 4000);
   return app;

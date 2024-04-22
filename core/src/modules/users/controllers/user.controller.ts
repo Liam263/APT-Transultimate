@@ -7,8 +7,10 @@ import {
 import { UserService } from '../services/user.service';
 import { Role } from '../../../enums/enum';
 import { Roles } from '../../../decorators/roles.decorator';
+import { Public } from 'src/decorators/public.decorator';
 
-@Roles(Role.Customer)
+// @Roles(Role.Customer)
+@Public()
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}

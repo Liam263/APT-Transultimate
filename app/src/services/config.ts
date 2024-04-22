@@ -2,7 +2,10 @@ import { removeAllCookie, getCookieToken } from "@/helpers/cookie";
 import axios, { AxiosInstance } from "axios";
 
 const baseURL = process.env.NEXT_PUBLIC_URL;
+// const baseURL = process.env.NODE_ENV === "development"?
+//                 process.env.NEXT_PUBLIC_URL:;
 
+console.log("Base URL: " + baseURL);
 const axiosClient: AxiosInstance = axios.create({
   baseURL,
   timeout: 5000,

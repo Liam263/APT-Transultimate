@@ -17,6 +17,7 @@ import mongoose from 'mongoose'; // Import mongoose
 @Module({
   imports: [
     ConfigModule.forRoot({
+      // envFilePath:`${process.cwd()}/.env${process.env.NODE_ENV}`,
       load: [configuration],
     }),
     PassportModule.register({ session: true }),

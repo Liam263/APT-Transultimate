@@ -1,6 +1,7 @@
 import { Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Public } from './decorators/public.decorator';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 @Controller()
 export class AppController {
@@ -8,9 +9,10 @@ export class AppController {
 
   @Get('/')
   @Public()
-  hello(): string {
-    console.log(this.appService)
-    return this.appService.getHello(); 
+  hello(request: VercelRequest, response: VercelResponse): string {
+    console.log("request: ", request);
+    console.log("response: ", response);
+    return this.appService.getHello();
   }
 
   @Get('/check-mailchip')

@@ -9,6 +9,7 @@ export class AppController {
   @Get('/')
   @Public()
   hello(): string {
+    console.log(this.appService)
     return this.appService.getHello(); 
   }
 

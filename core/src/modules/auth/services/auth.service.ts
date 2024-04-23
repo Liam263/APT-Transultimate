@@ -73,7 +73,7 @@ export class AuthService {
       // console.log(email);
       // console.log(password);
       console.log(encodePassword(password));
-      console.log(user);
+      // console.log(user);
       if (!user) {
         throw new HttpException(
           `Email or password is incorrect`,

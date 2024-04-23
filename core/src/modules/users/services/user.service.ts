@@ -17,8 +17,9 @@ export class UserService {
   async getUser(id: string): Promise<GetUserResponse> {
     const user = await this.userModel
       .findById(id)
-      .select('_id displayName photoURL email role status');
+      .select('_id fullName photoURL email role status');
 
+    console.log('USER services : ',user);
     return {
       data: user,
     };

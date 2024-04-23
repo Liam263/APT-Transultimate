@@ -19,7 +19,7 @@ export type RegisterResponse = {
 
 export const login = async (authData: AuthRequest): Promise<LoginResponse> => {
   try {
-    console.log(authData);
+    // console.log(authData);
     // {email: 'nguyethanhlam091@gmail.com', password: 'Lamnguyen263'}
     const { data } = await axiosClient.post<AuthRequest, LoginResponse>(
       `/auth/signin`,
@@ -40,7 +40,7 @@ export const register = async (
   authData: AuthRequest
 ): Promise<RegisterResponse> => {
   try {
-    console.log(authData);
+    // console.log(authData);
     const { status } = await axiosClient.post<AuthRequest, RegisterResponse>(
       `/auth/create`,
       authData

@@ -40,7 +40,7 @@ export const getCurrentUser = async (): Promise<User> => {
     const { data } = await axiosClient.get<GetCurrentUserResponse>(`/user`);
 
     const user = data.data;
-
+    console.log(user);
     return user;
   } catch (error) {
     const err = error as AxiosError<any>;

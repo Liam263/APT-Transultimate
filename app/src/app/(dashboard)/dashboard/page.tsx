@@ -5,10 +5,10 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import useUserStore from "@/stores/user";
 import { Search } from "lucide-react";
-
+import {useNavigate} from "react-router-dom";
 export default function HomePage() {
   const { user } = useUserStore();
-
+  const navigate = useNavigate();
   return (
     <Tabs defaultValue="overview">
       <div className="flex items-center px-4 py-2">

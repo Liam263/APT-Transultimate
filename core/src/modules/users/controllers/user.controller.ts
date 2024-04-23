@@ -15,8 +15,15 @@ import { Public } from 'src/decorators/public.decorator';
 export class UserController {
   constructor(private userService: UserService) {}
 
+  // @Get()
+  // async getUser(@UserToken() user: UserTokenType): Promise<GetUserResponse> {
+  //   return this.userService.getUser(user?._id);
+  // }
+
+
   @Get()
   async getUser(@UserToken() user: UserTokenType): Promise<GetUserResponse> {
+    console.log('getUser ',user)
     return this.userService.getUser(user?._id);
   }
 
